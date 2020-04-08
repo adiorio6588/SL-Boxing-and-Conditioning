@@ -109,6 +109,20 @@ ol {
 	margin: 0;
 }
 
+
+a {
+    list-style: none;
+    font-size: 16px;
+	color: #afb4bf;
+	-webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+a:hover {
+	color: #e4381C;
+}
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -744,6 +758,7 @@ ol {
 
 .classes-section.schedule-page .class-title .section-title {
 	margin-bottom: 65px;
+	margin-top: 65px;
 }
 
 .class-title {
