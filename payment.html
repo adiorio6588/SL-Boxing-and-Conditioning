@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Activitar Template">
+    <meta name="keywords" content="Activitar, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SL Boxing and Conditioning</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="img/logo.png" alt="Image of SL Boxing and Conditioning logo">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About us</a></li>
+                            <li><a href="./staff.html">Staff</a></li>
+                            <li><a href="./classes.html">Classes & Schedule</a></li>
+                            <li><a href="./gallery.html">Gallery</a></li>
+                            <li><a href="./blog.html">Blog</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about-us.html">About Us</a></li>
+                                    <li><a href="./coming-soon.html">Blog Details(Coming Soon)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contacts</a></li>
+                            <li><a href="./online-store.html">Store</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="img/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Payment</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="#"><i class="fa fa-home"></i> Home</a>
+                            <span>Payment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- About Section Begin -->
+    <section class="home-about">
+        
+        <div class="container text-center">
+            <div id="paypal-button-container"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+            <script>
+              paypal.Buttons({
+                  style: {
+                      shape: 'rect',
+                      color: 'gold',
+                      layout: 'vertical',
+                      label: 'paypal',
+                      
+                  },
+                  createOrder: function(data, actions) {
+                      return actions.order.create({
+                          purchase_units: [{
+                              amount: {
+                                  value: '1'
+                              }
+                          }]
+                      });
+                  },
+                  onApprove: function(data, actions) {
+                      return actions.order.capture().then(function(details) {
+                          alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                      });
+                  }
+              }).render('#paypal-button-container');
+            </script>
+        </div>
+    
+    </section>
+    <!-- About Section End -->
+
+    <!-- Class Time Section Begin -->
+    <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Classtime Table</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li>
+                            <li data-tsfilter="crossfit">Boxing Training</li>
+                            <li data-tsfilter="lunge">Weight Training</li>
+                            <li data-tsfilter="Sports Specific Training">Sports Specific Training</li>
+                            <li data-tsfilter="walls">Pilates</li>
+                            <li data-tsfilter="yoga">Yoga</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="classtime-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="workout-time">10.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                <span>10.00 - 14.00</span>
+                                <h6>Boxing Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                <span>10.00 - 15.00</span>
+                                <h6>Boxing Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="lunge">
+                                <span>10.00 - 13.00</span>
+                                <h6>Weight Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="lunge">
+                                <span>10.00 - 13.30</span>
+                                <h6>Weight Training</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">14.00</td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="lunge">
+                                <span>14.00 - 17.00</span>
+                                <h6>Weight Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                <span>14.00 - 17.00</span>
+                                <h6>Boxing Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="walls">
+                                <span>14.00 - 15.30</span>
+                                <h6>Pilates</h6>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">16.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="lunge">
+                                <span>16.00 - 18.00</span>
+                                <h6>Weight Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="yoga">
+                                <span>16.00 - 19.00</span>
+                                <h6>Yoga</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="yoga">
+                                <span>16.00 - 19.00</span>
+                                <h6>Yoga</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="Sports Specific Training">
+                                <span>16.00 - 17.00</span>
+                                <h6>Sports Specific Training</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="murph">
+                                <span>16.00 - 20.00</span>
+                                <h6>murph</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">18.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="walls">
+                                <span>18.00 - 20.00</span>
+                                <h6>Pilates</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="Sports Specific Training">
+                                <span>18.00 - 20.00</span>
+                                <h6>Sports Specific Training</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="chelsea">
+                                <span>18.00 - 22.00</span>
+                                <h6>TBA</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="annie">
+                                <span>18.00 - 22.00</span>
+                                <h6>TBA</h6>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">20.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="lunge">
+                                <span>21.00 - 23.00</span>
+                                <h6>Weight Training</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="walls">
+                                <span>20.00 - 22.00</span>
+                                <h6>Pilates</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="walls">
+                                <span>20.30 - 23.00</span>
+                                <h6>Pilates</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                <span>22.00 - 23.00</span>
+                                <h6>TBA</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                <span>21.00 - 23.00</span>
+                                <h6>TBA</h6>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Class Time Section End -->
+
+    <!-- Price Plan Section Begin -->
+    <section class="price-section spad set-bg" data-setbg="img/price-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>CHOOSE YOUR PRICING PLAN</h2>
+                        <p>Session Prices including boxing and nutrional suggestions <br />(volume discounts available)</p>
+                    </div>
+                    <!-- <div class="toggle-option">
+                        <ul>
+                            <li>Monthly</li>
+                            <li>
+                                <label class="switch"></label>
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </li>
+                            <li>Years</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Normal</h4>
+                        <div class="price-plan">
+                            <h2>50 <span>$</span></h2>
+                            <p>Per Session</p>
+                            <p>45min Semi-private</p>
+                        </div>
+                        <ul>
+                            <li>Boxing</li>
+                            <li>Weight Training</li>
+                            <li>Sports Specific Training</li>
+                            <li>Pilates</li>
+                            <li>Yoga</li>
+                            <li>In-Home Training & Online</li>
+                        </ul>
+                        <a href="#" class="primary-btn price-btn">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Professional</h4>
+                        <div class="price-plan">
+                            <h2>70 <span>$</span></h2>
+                            <p>Per Session</p>
+                            <p>45min Private</p>
+                        </div>
+                        <ul>
+                            <li>Boxing</li>
+                            <li>Weight Training</li>
+                            <li>Sports Specific Training</li>
+                            <li>Pilates</li>
+                            <li>Yoga</li>
+                            <li>In-Home Training & Online</li>
+                        </ul>
+                        <a href="#" class="primary-btn price-btn">Get Started</a>
+                        <div class="tic-text">
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Advanced</h4>
+                        <div class="price-plan">
+                            <h2>80 <span>$</span></h2>
+                            <p>Per Session</p>
+                            <p>45min Private</p>
+                        </div>
+                        <ul>
+                            <li>Boxing</li>
+                            <li>Weight Training</li>
+                            <li>Sports Specific Training</li>
+                            <li>Pilates</li>
+                            <li>Yoga</li>
+                            <li>In-Home Training & Online</li>
+                        </ul>
+                        <a href="#" class="primary-btn price-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Price Plan Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="#"><img src="img/logo-lg.png" alt=""></a>
+                        </div>
+                        <p>Change your lifestyle today. Personalized boxing and fitness conditioning programs at its best!</p>
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a href="#"><i class="fa fa-facebook" target="_blank"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" target="_blank"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" target="_blank"></i></a>
+                            <a href="#"><i class="fa fa-instagram" target="_blank"></i></a>
+                        </div>
+                    </div>
+                    <a href="payment.html" class="primary-btn about-btn mb-4">Make a Payment</a>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>The Latest Fitness Blogs</h5>
+                        <div class="footer-blog">
+                            <a href="#" class="fb-item">
+                                <h6>SL Boxing and Conditioning </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Apr 06, 2020</span>
+                            </a>
+                            <a href="https://blog.myfitnesspal.com" class="fb-item" target="_blank">
+                                <h6>MyFitnessPal </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="https://www.acefitness.org/education-and-resources/professional/expert-articles/" class="fb-item" target="_blank">
+                                <h6>ACE </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="https://breakingmuscle.com" class="fb-item" target="_blank">
+                                <h6>Breaking Muscle</h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-widget">
+                        <h5>Programs</h5>
+                        <ul class="workout-program">
+                            <li><a href="#">Boxing Training</a></li>
+                            <li><a href="#">Weight Training</a></li>
+                            <li><a href="#">Sports Specific Training</a></li>
+                            <li><a href="#">Pilates</a></li>
+                            <li><a href="#">Yoga</a></li>
+                            <li><a href="#">In-Home Training & Online</a></li>
+                            <li><a href="#">Massage Therapy</a></li>
+                            <li><a href="#">Nutrition/Dietetics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-widget">       
+                        <h5>Get Info</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Phone:</span>
+                                (312) 725 9874
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                <div class="email-link"><a href="mailto:slperonaltraining39@gmail.com">slperonaltraining39@gmail.com</a></div>
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Locations</span>
+                                Streeterville | River North
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Created by <a target="_blank" class="aboutlinks" href="https://www.codediver.dev/" target="_blank">Anthony Diorio</a>, website designed by <a href="https://colorlib.com" target="_blank">Colorlib</a>, logo designed by <a href="https://da85.cargo.site" target="_blank">Dañella Avina</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
